@@ -14,7 +14,7 @@
 
   };
   $(document).ready(function() {
-    $("form#placeHolder").submit(function(event) {
+    $("form#pinggame").submit(function(event) {
     event.preventDefault();
     var numeral = parseInt($("input#numeral").val());
     var result = Answer(numeral);
