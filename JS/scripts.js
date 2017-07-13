@@ -17,7 +17,13 @@
     $("form#pinggame").submit(function(event) {
     event.preventDefault();
     var numeral = parseInt($("input#numeral").val());
-    var result = Answer(numeral);
-    $("#result").text(result);
+
+    var result = "<ul>"
+    for (i = 1; i <= numeral; i++){
+         result += "<li>" + Answer(i) + "</li>"
+    }
+    result += "</ul>"
+
+    $("#result").append(result);
   });
 });
